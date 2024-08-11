@@ -4,12 +4,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.[contenthash].js',
-    assetModuleFilename: 'images/[name].[contenthash][ext]',
+    filename: 'bundle.js',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -57,6 +57,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      filename: 'index.html',
     }),
     new MiniCssExtractPlugin({
       filename: 'styles.[contenthash].css',
@@ -67,20 +68,4 @@ module.exports = {
       ],
     }),
   ],
-  devServer: {
-    static: [
-      path.join(__dirname, 'dist'),
-      path.join(__dirname, 'public')
-    ],
-    compress: true,
-    port: 8080,
-    host: '0.0.0.0',
-    allowedHosts: ['localhost', '.codesandbox.io'],
-    hot: true,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
-    }
-  },
 };
