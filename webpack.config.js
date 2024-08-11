@@ -30,9 +30,23 @@ module.exports = {
               sizes: [300, 600, 900],
               placeholder: true,
               placeholderSize: 50,
-              name: 'images/[name]-[width].[ext]',
+              name: 'images/[name]-[width]-[hash:8].[ext]',
               format: 'webp',
               quality: 70,
+              formatOptions: {
+                webp: {
+                  quality: 70,
+                },
+                jpg: {
+                  quality: 70,
+                },
+                png: {
+                  quality: 70,
+                },
+              },
+              esModule: true,
+              outputPath: 'images/',
+              publicPath: '/images/',
             },
           },
         ],
