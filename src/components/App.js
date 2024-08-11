@@ -1,6 +1,6 @@
 import { h } from 'preact';
 import { HelloWorld } from './HelloWorld';
-import responsiveImage from '../../public/responsive-image.png?sizes[]=300,sizes[]=600,sizes[]=900&format=webp&format=original';
+import responsiveImage from '../../public/responsive-image.png?sizes[]=300,sizes[]=600,sizes[]=900';
 
 export function App() {
   return (
@@ -11,7 +11,7 @@ export function App() {
         <picture>
           <source
             type="image/webp"
-            srcSet={responsiveImage.webp.srcSet}
+            srcSet={responsiveImage.srcSet}
             sizes="(max-width: 300px) 300px, (max-width: 600px) 600px, 900px"
           />
           <img
