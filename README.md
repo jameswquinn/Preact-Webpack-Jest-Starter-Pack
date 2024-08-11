@@ -2,7 +2,7 @@
 
 This is a comprehensive starter pack for Preact applications, featuring Webpack for bundling, Jest for testing, and additional configurations for CodeSandbox.io development and Vercel deployment. It includes a sample app with a responsive image, "Hello World" message, and click counter.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyourusername%2Fpreact-webpack-jest-starter-pack)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fjameswquinn%2Fpreact-webpack-jest-starter-pack)
 
 ## Features
 
