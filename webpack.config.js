@@ -31,8 +31,8 @@ module.exports = {
             options: {
               adapter: require('responsive-loader/sharp'),
               sizes: [300, 600, 900],
-              format: ['webp', 'jpeg', 'png'],
-              name: 'images/[name].[hash].[ext]',
+              format: 'webp',
+              name: 'images/[name]-[width].[ext]',
             },
           },
         ],
