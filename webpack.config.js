@@ -18,9 +18,6 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-          },
         },
       },
       {
@@ -42,7 +39,6 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'postcss-loader'
         ],
       },
     ],
@@ -68,4 +64,13 @@ module.exports = {
       ],
     }),
   ],
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    compress: true,
+    port: 8080,
+    hot: true,
+    historyApiFallback: true,
+  },
 };
