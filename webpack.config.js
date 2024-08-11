@@ -21,7 +21,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpg|jpeg|gif|webp)$/,
+        test: /\.(png|jpg|jpeg|gif)$/,
         use: [
           {
             loader: 'responsive-loader',
@@ -31,6 +31,8 @@ module.exports = {
               placeholder: true,
               placeholderSize: 50,
               name: 'images/[name]-[width].[ext]',
+              format: 'webp',
+              quality: 70,
             },
           },
         ],
