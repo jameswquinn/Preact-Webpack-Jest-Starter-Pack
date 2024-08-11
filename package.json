@@ -33,8 +33,8 @@
     "mini-css-extract-plugin": "^2.x.x",
     "postcss": "^8.x.x",
     "postcss-loader": "^6.x.x",
-    "responsive-loader": "^latest",
-    "sharp": "^0.30.x",
+    "responsive-loader": "^3.1.2",
+    "sharp": "^0.32.1",
     "webpack": "^5.x.x",
     "webpack-cli": "^4.x.x",
     "webpack-dev-server": "^4.x.x"
