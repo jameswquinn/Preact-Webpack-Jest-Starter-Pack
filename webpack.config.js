@@ -22,10 +22,18 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|gif|webp)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'images/[name][ext]'
-        }
+        use: [
+          {
+            loader: 'responsive-loader',
+            options: {
+              adapter: require('responsive-loader/sharp'),
+              sizes: [300, 600, 900],
+              placeholder: true,
+              placeholderSize: 50,
+              name: 'images/[name]-[width].[ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.css$/,
